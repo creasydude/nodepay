@@ -28,7 +28,7 @@ def show_copyright():
 # Constants
 PING_INTERVAL = 60  # 每分钟发送一次请求
 RETRIES = 60  # 全局重试计数
-TOKEN_FILE = 'np_tokens_1.txt'  # 令牌文件名
+TOKEN_FILE = 'np_tokens.txt'  # 令牌文件名
 
 DOMAIN_API = {
     "SESSION": "https://api.nodepay.org/api/auth/session",
