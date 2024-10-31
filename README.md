@@ -1,9 +1,3 @@
-# nodepayai
-nodepay.ai签到 100% 在线免费 Python3
-通过我的RF注册：https://app.nodepay.ai/register?ref=PMLZWyjtnh4r9Ki
-# 功能
-服务器挂机使用，不用多ip切换。
-
 打开链接并登录 ``https://app.nodepay.ai/dashboard``
 在页面上按 F12 打开控制台并输入代码（Ctrl + Shift + i）检查
 在控制台中输入 ``localStorage.getItem('np_token');``
