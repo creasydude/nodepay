@@ -4,6 +4,7 @@ import time
 import uuid
 import cloudscraper  # 引入 cloudscraper
 from loguru import logger
+import sys
 
 
 def show_copyright():
