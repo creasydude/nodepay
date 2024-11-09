@@ -16,14 +16,6 @@ def show_copyright():
     """
     print(copyright_info)
 
-    confirm = input("Press Enter to continue or Ctrl+C to exit... ")
-
-    if confirm.strip() == "":
-        print("Continuing with the program...")
-    else:
-        print("Exiting the program.")
-        exit()
-
 
 # Constants
 PING_INTERVAL = 60  # 每分钟发送一次请求
@@ -103,7 +95,8 @@ async def call_api(url, data, token):
         return valid_resp(response.json())
     except Exception as e:
         logger.error(f"Error during API call: {e}")
-        raise ValueError(f"Failed API call to {url}")
+        # Exit the program if a critical error occurs
+        sys.exit(f"Critical error encountered in call_api: {e}")
 
 
 async def start_ping(token):
@@ -146,7 +139,7 @@ async def ping(token):
             handle_ping_fail(response)
     except Exception as e:
         logger.error(f"Ping failed: {e}")
-        handle_ping_fail(None)
+        sys.exit(f"Critical error encountered in ping: {e}")
 
 
 def handle_ping_fail(response):
